@@ -113,7 +113,7 @@ class WSRoot(object):
         :param protocol: A registered protocol name or an instance
                          of a protocol.
         """
-        if isinstance(protocol, str):
+        if isinstance(protocol, basestring):
             protocol = getprotocol(protocol, **options)
         self.protocols.append(protocol)
         protocol.root = weakref.proxy(self)
